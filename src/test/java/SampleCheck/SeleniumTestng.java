@@ -32,7 +32,7 @@ public class SeleniumTestng {
 
     @Test (priority = 2)
     public void TestLogin() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
         //WebDriver driver = new ChromeDriver();
         options.addArguments("--headless");
         driver.get("https://www.saucedemo.com/");
@@ -51,7 +51,7 @@ public class SeleniumTestng {
 
     @Test (priority = 1)
     public void TestScroll() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
         options.addArguments("--headless");
         //WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
@@ -75,7 +75,7 @@ public class SeleniumTestng {
 
     @Test (priority = 4)
     public void TestAlertOK() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
+        //System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
         options.addArguments("--headless");
         //WebDriver driver = new ChromeDriver();
         driver.get("http://demo.automationtesting.in/Alerts.html");
