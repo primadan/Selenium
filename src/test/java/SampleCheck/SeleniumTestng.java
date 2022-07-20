@@ -21,14 +21,14 @@ public class SeleniumTestng {
     public static void setupClass() {
         WebDriverManager.chromedriver().setup();
     }
-    /*@Test (priority = 3)
+    @Test (priority = 3)
     public void Test() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe");
         //WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
         Thread.sleep(5000);
-    }*/
+    }
 
     @Test (priority = 2)
     public void TestLogin() throws InterruptedException {
@@ -70,6 +70,24 @@ public class SeleniumTestng {
         WebElement resuts = driver.findElement(By.xpath("//*[text()='7.99']"));
         driver.findElement(By.xpath("//*[text()='7.99']"));
         Assert.assertEquals(((WebElement) resuts).getText(), "$7.99");
+        Thread.sleep(5000);
+    }
+
+    @Test (priority = 4)
+    public void TestAlertOK() throws InterruptedException {
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
+        options.addArguments("--headless");
+        //WebDriver driver = new ChromeDriver();
+        driver.get("http://demo.automationtesting.in/Alerts.html");
+        driver.manage().window().maximize();
+        driver.findElement(By.xpath("//a[@href = '#OKTab']")).click();
+        driver.findElement(By.xpath("//*[@id=\"OKTab\"]/button")).click();
+        Thread.sleep(5000);
+        driver.switchTo().alert().dismiss();
+        Thread.sleep(5000);
+        WebElement resuts = driver.findElement(By.xpath("//*[text()='Automation Demo Site ']"));
+        driver.findElement(By.xpath("//*[text()='Automation Demo Site ']"));
+        Assert.assertEquals(((WebElement) resuts).getText(), "Automation Demo Site");
         Thread.sleep(5000);
     }
 
