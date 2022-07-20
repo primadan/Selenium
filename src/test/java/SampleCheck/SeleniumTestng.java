@@ -1,11 +1,12 @@
 package SampleCheck;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -13,9 +14,12 @@ import org.testng.annotations.Test;
 
 public class SeleniumTestng {
 
-    public WebDriver driver = new ChromeDriver();
     public WebElement element;
     public ChromeOptions options = new ChromeOptions();
+    static {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe");
+    }
+    public WebDriver driver = new ChromeDriver();
 
     @BeforeClass
     public static void setupClass() {
@@ -23,8 +27,7 @@ public class SeleniumTestng {
     }
     @Test (priority = 3)
     public void Test() throws InterruptedException {
-        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe");
-        //WebDriver driver = new ChromeDriver();
+        options.addArguments("--headless");
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
         Thread.sleep(5000);
@@ -32,8 +35,6 @@ public class SeleniumTestng {
 
     @Test (priority = 2)
     public void TestLogin() throws InterruptedException {
-        //System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
-        //WebDriver driver = new ChromeDriver();
         options.addArguments("--headless");
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
@@ -51,9 +52,7 @@ public class SeleniumTestng {
 
     @Test (priority = 1)
     public void TestScroll() throws InterruptedException {
-        //System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
         options.addArguments("--headless");
-        //WebDriver driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
         Thread.sleep(5000);
@@ -75,9 +74,7 @@ public class SeleniumTestng {
 
     @Test (priority = 4)
     public void TestAlertOK() throws InterruptedException {
-        //System.setProperty("webdriver.chrome.driver","C:\\Users\\aulia_p502\\IdeaProjects\\Selenium-2\\resources\\windows\\chromedriver.exe" );
         options.addArguments("--headless");
-        //WebDriver driver = new ChromeDriver();
         driver.get("http://demo.automationtesting.in/Alerts.html");
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//a[@href = '#OKTab']")).click();

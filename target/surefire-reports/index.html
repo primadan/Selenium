@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-All_Test_Suite" class="navigator-link ">
-                    <span>C:\Users\aulia_p502\IdeaProjects\SeleniumProject\testng.xml</span>
+                    <span>C:\Users\aulia_p502\IdeaProjects\SeleniumGit\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +102,16 @@
                       <a href="#" panel-name="suite-All_Test_Suite" class="show-methods passed suite-All_Test_Suite"> (show)</a> <!-- show-methods passed suite-All_Test_Suite -->
                     </span>
                     <div class="method-list-content passed suite-All_Test_Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="SampleCheck.SeleniumTestng" class="method navigator-link" hash-for-method="Test">Test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-All_Test_Suite" title="SampleCheck.SeleniumTestng" class="method navigator-link" hash-for-method="TestAlertOK">TestAlertOK</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-All_Test_Suite" title="SampleCheck.SeleniumTestng" class="method navigator-link" hash-for-method="TestLogin">TestLogin</a> <!-- method navigator-link -->
@@ -132,6 +142,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="Test">
+                  </a> <!-- Test -->
+                  <span class="method-name">Test</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestAlertOK">
+                  </a> <!-- TestAlertOK -->
+                  <span class="method-name">TestAlertOK</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="TestLogin">
                   </a> <!-- TestLogin -->
                   <span class="method-name">TestLogin</span>
@@ -149,7 +173,7 @@
         </div> <!-- panel All_Test_Suite -->
         <div panel-name="test-xml-All_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\aulia_p502\IdeaProjects\SeleniumProject\testng.xml</span>
+            <span class="header-content">C:\Users\aulia_p502\IdeaProjects\SeleniumGit\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -198,20 +222,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TestScroll')
 data.setCell(0, 2, 'SampleCheck.SeleniumTestng')
-data.setCell(0, 3, 20992);
+data.setCell(0, 3, 27857);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'TestLogin')
+data.setCell(1, 1, 'TestAlertOK')
 data.setCell(1, 2, 'SampleCheck.SeleniumTestng')
-data.setCell(1, 3, 15574);
+data.setCell(1, 3, 19169);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'TestLogin')
+data.setCell(2, 2, 'SampleCheck.SeleniumTestng')
+data.setCell(2, 3, 15422);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Test')
+data.setCell(3, 2, 'SampleCheck.SeleniumTestng')
+data.setCell(3, 3, 5095);
 window.suiteTableData['All_Test_Suite']= { tableData: data, tableDiv: 'times-div-All_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-All_Test_Suite">
               </div> <!-- times-div-All_Test_Suite -->
             </div> <!-- times-div -->
@@ -244,15 +276,23 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">TestScroll</span>
-                <span class="method-start">217 ms</span>
+                <span class="method-start">558 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">TestLogin</span>
-                <span class="method-start">21219 ms</span>
+                <span class="method-start">28423 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test</span>
+                <span class="method-start">43847 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestAlertOK</span>
+                <span class="method-start">48944 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">36795 ms</span>
+                <span class="method-start">68114 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
